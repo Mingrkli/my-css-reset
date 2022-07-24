@@ -1,0 +1,48 @@
+/* 
+    This is my CSS reset that I use made from the following
+    - https://www.youtube.com/watch?v=h3bTwCqX4ns&t=1s&ab_channel=KevinPowell
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    /* font: inherit; in case I want to do the font sizes myself */
+    box-sizing: border-box;
+}
+
+ul[role=list],
+ol[role=list] {
+    list-style: none;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    text-rendering: optimizeSpeed;
+    line-height: 1.5; /* might change it later */
+}
+
+img, picture, svg {
+    max-width: 100%;
+    display: block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
